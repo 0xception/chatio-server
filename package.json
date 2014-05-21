@@ -1,0 +1,18 @@
+{
+  "name": "chatio-server",
+  "description": "Simple chat service using socket.io and redis datastore",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "socket.io": "~0.9.16",
+    "winston": "~0.7.3",
+    "lodash": "~2.4.1",
+    "redis": "~0.10.2",
+    "socket.io-redis": "~0.1.2",
+    "async": "~0.9.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.19.0"
+  }
+}
