@@ -91,10 +91,6 @@ io.on('connection', function(socket) {
                 socket.emit('deregistered', { username: username });
             });
         }
-        //chatio.delUser(socket.username, function(err) {
-        //    delete socket.username
-        //    socket.emit('deregistered', { username: username });
-        //});
     });
 
     socket.on('users', function(data) {
@@ -192,8 +188,6 @@ io.on('connection', function(socket) {
         }
         chatio.getUser(data.username, function(err, user) {
             if (!!err) throw err;
-
-            logger.info('User Details: ', { user: user});
 
             io.sockets.socket(user.id).emit('whisper', {
                 username: socket.username,
