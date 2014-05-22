@@ -184,6 +184,24 @@ io.on('connection', function(socket) {
         });
     });
 
+    socket.on('whisper', function(data) {
+        logger.debug("Whisper recieved");
+        if (!data && !data.username) {
+            socket.emit('notice', {error: 'Not a valid name'});
+            return;
+        }
+        chatio.getUser(data.username, function(err, user) {
+            if (!!err) throw err;
+
+            logger.info('User Details: ', { user: user});
+
+            io.sockets.socket(user.id).emit('whisper', {
+                username: socket.username,
+                message: data.message
+            });
+        });
+    });
+
     socket.on('disconnect', function() {
         if (socket.username) {
             if (socket.room) {
