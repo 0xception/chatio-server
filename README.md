@@ -37,13 +37,14 @@ If you have a git or a github account:
   - Multiple chat rooms
   - Redis backend store for users and room (not presistant)
   - Clustering safe (pm2 for auto clustering) 
+  - Whisper/private message support
 
 ## TODO
 
   - Binary wrapper using [commander.js](https://github.com/visionmedia/commander.js) for easier startup
   - Split apart socket.io transport layer and application layer
   - Implement amqp to communicate with applicaiton layer 
-  - Testing framework using [mocha](http://visionmedia.github.io/mocha/)
+  - ~~Testing framework using [mocha](http://visionmedia.github.io/mocha/)~~
 
   
 
