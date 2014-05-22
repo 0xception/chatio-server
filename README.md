@@ -26,10 +26,10 @@ If you have a git or a github account:
   
   Once chatio-server has been installed to a dir simply run the server using node app.js. If you'd like to daemonize the server into a nice little multi-process service try using pm2.
   
-### PM2 Service
+### PM2 Service (Optional)
     
-    $ npm install -g pm2 (optional, highly recommended)
-    $ pm2 start -i max app.js (optional)
+    $ npm install -g pm2
+    $ pm2 start -i max app.js
 
 ## Features
 
