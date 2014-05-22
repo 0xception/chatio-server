@@ -188,6 +188,13 @@ io.on('connection', function(socket) {
         }
         chatio.getUser(data.username, function(err, user) {
             if (!!err) throw err;
+            
+            if (!user) {
+                socket.emit('whisper', {
+                    error: 'User `'+ data.username +'` not found. '
+                });
+                return;
+            }
 
             io.sockets.socket(user.id).emit('whisper', {
                 username: socket.username,
