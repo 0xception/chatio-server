@@ -190,7 +190,7 @@ io.on('connection', function(socket) {
             if (!!err) throw err;
             
             if (!user) {
-                socket.emit('whisper', {
+                socket.emit('notice', {
                     error: 'User `'+ data.username +'` not found. '
                 });
                 return;
