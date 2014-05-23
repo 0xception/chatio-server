@@ -26,10 +26,10 @@ If you have a git or a github account:
   
   Once chatio-server has been installed to a dir simply run the server using node app.js. If you'd like to daemonize the server into a nice little multi-process service try using pm2.
   
-### PM2 Service
+### PM2 Service (Optional)
     
-    $ npm install -g pm2 (optional, highly recommended)
-    $ pm2 start -i max app.js (optional)
+    $ npm install -g pm2
+    $ pm2 start -i max app.js
 
 ## Features
 
@@ -37,13 +37,14 @@ If you have a git or a github account:
   - Multiple chat rooms
   - Redis backend store for users and room (not presistant)
   - Clustering safe (pm2 for auto clustering) 
+  - Whisper/private message support
 
 ## TODO
 
   - Binary wrapper using [commander.js](https://github.com/visionmedia/commander.js) for easier startup
   - Split apart socket.io transport layer and application layer
   - Implement amqp to communicate with applicaiton layer 
-  - Testing framework using [mocha](http://visionmedia.github.io/mocha/)
+  - ~~Testing framework using [mocha](http://visionmedia.github.io/mocha/)~~
 
   
 
