@@ -44,7 +44,7 @@ If you have a git or a github account:
   - Binary wrapper using [commander.js](https://github.com/visionmedia/commander.js) for easier startup
   - Split apart socket.io transport layer and application layer
   - Implement amqp to communicate with applicaiton layer 
-  - ~~Testing framework using [mocha](http://visionmedia.github.io/mocha/)~~
+  - ~~Testing framework using [mocha](http://mochajs.org/)~~
 
   
 
